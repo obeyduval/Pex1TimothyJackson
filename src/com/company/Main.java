@@ -3,6 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	System.out.println("Hi");
+	    // introduce user to calculator UI
+        System.out.println("Welcome to the Vector Calculator!");
     }
 }
