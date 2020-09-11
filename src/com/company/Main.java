@@ -41,9 +41,9 @@ public class Main {
         System.out.println(userIntegers);
 
         //parse input for integers
-        if(userInput.contains("|")){
-            System.out.println("Found \"|\""); // debug
-        }
+//        if(userInput.contains("|")){
+//            System.out.println("Found \"|\""); // debug
+//        }
 
     }
 
