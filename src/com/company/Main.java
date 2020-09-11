@@ -1,4 +1,7 @@
 package com.company;
+
+import java.util.Scanner;
+
 /*
 * @authors - Timothy Jackson
 * @teacher - Dr. Hadfield
@@ -18,9 +21,17 @@ public class Main {
     }
 
     public static void vectorCalculator( double x, double y){
-        System.out.print("Enter vector expression: |<" + x + ",");
-        System.out.print(y + ">|");
-        System.out.println("\nResult is " + x);
+        // ask user to enter vector expression
+        System.out.print("Enter vector expression: ");
+
+        //create scanner class
+        Scanner in = new Scanner(System.in);
+
+        //gets user input
+        String userInput = in.nextLine();
+
+        //debug
+        System.out.println("Result is " + userInput);
     }
 
 }
