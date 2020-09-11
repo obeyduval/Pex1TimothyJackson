@@ -33,22 +33,34 @@ public class Main {
         String userInput = in.nextLine();
 
         //get integers from userInput
-        Pattern p = Pattern.compile("\\d+");
-        Matcher m = p.matcher(userInput);
-        while(m.find()) {
-            int i = 1;
-            if ( i == 1) {
-                System.out.println(m.group());
-                x = Integer.parseInt(m.group());
-                System.out.println("x is: " + x);
-            }
-            else {
-                System.out.println(m.group());
-                y = Integer.parseInt(m.group());
-                System.out.println("y is: " + y);
-                i++;
-            }
-        }
+//        char[] ch = new char[userInput.length()];
+//
+//        // Copy character by character into array
+//        for (int i = 0; i < userInput.length(); i++) {
+//            ch[i] = userInput.charAt(i);
+//        }
+//
+//        // Printing content of array
+//        for (char c : ch) {
+//            System.out.println(c);
+//        }
+
+//        Pattern p = Pattern.compile("\\d+");
+//        Matcher m = p.matcher(userInput);
+//        while(m.find()) {
+//            int i = 1;
+//            if ( i == 1) {
+//                System.out.println(m.group());
+//                x = Integer.parseInt(m.group());
+//                System.out.println("x is: " + x);
+//            }
+//            else {
+//                System.out.println(m.group());
+//                y = Integer.parseInt(m.group());
+//                System.out.println("y is: " + y);
+//                i++;
+//            }
+//        }
 
         //parse input for integers
 //        if(userInput.contains("|")){
