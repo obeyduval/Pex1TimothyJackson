@@ -31,7 +31,14 @@ public class Main {
         String userInput = in.nextLine();
 
         //get integers from userInput
-
+        char[] chars = userInput.toCharArray();
+        StringBuilder userIntegers = new StringBuilder();
+        for(char c : chars){
+            if(Character.isDigit(c) || Character.isLetter('.')){
+                userIntegers.append(c);
+            }
+        }
+        System.out.println(userIntegers);
 
         //parse input for integers
         if(userInput.contains("|")){
