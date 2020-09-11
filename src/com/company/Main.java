@@ -18,8 +18,9 @@ public class Main {
     }
 
     public static void vectorCalculator( double x, double y){
-        System.out.println("x is : " + x);
-        System.out.println("y is : " + y);
+        System.out.print("Enter vector expression: |<" + x + ",");
+        System.out.print(y + ">|");
+        System.out.println("\nResult is " + x);
     }
 
 }
