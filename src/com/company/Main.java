@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /*
 * @authors - Timothy Jackson
@@ -31,14 +33,22 @@ public class Main {
         String userInput = in.nextLine();
 
         //get integers from userInput
-        char[] chars = userInput.toCharArray();
-        StringBuilder userIntegers = new StringBuilder();
-        for(char c : chars){
-            if(Character.isDigit(c) || Character.isLetter('.')){
-                userIntegers.append(c);
+        Pattern p = Pattern.compile("\\d+");
+        Matcher m = p.matcher(userInput);
+        while(m.find()) {
+            int i = 1;
+            if ( i == 1) {
+                System.out.println(m.group());
+                x = Integer.parseInt(m.group());
+                System.out.println("x is: " + x);
+            }
+            else {
+                System.out.println(m.group());
+                y = Integer.parseInt(m.group());
+                System.out.println("y is: " + y);
+                i++;
             }
         }
-        System.out.println(userIntegers);
 
         //parse input for integers
 //        if(userInput.contains("|")){
