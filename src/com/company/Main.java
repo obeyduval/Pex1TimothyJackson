@@ -30,8 +30,11 @@ public class Main {
         //gets user input
         String userInput = in.nextLine();
 
-        //debug
-        System.out.println("Result is " + userInput);
+        //parse input for integers
+        if(userInput.contains("|")){
+            System.out.println("Found \"|\""); // debug
+        }
+
     }
 
 }
