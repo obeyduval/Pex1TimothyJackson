@@ -45,6 +45,9 @@ public class VectorCalculator {
 
         System.out.println("Thank you for using the Vector Calculator!");
     }
+    private static void parseDirectionExpression(Scanner cmd){
+
+    }
 
     private static void parseExpression(Scanner cmd) throws Exception {
         if (cmd.hasNext("<")) {
@@ -54,7 +57,15 @@ public class VectorCalculator {
         }
     }
 
-    private static void parseScaleExpression(Scanner cmd) throws Exception {
+    private static void parseNormalizeExpression(Scanner cmd) throws Exception {
+    }
+
+    private static void parseNormExpression(Scanner cmd) throws Exception{
+
+    }
+
+    private static void parseScaleExpression(Scanner cmd) throws Exception{
+
     }
 
     private static void parseVectorExpression(Scanner cmd) throws Exception {
