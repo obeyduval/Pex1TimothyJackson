@@ -96,6 +96,32 @@ public class Vector330ClassTest {
 
     }
 
-    /**
+    /**@Test
+     *
+     */
+    void setY2(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void equals(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void add(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void subtract(){
+
+    }
 }
 
