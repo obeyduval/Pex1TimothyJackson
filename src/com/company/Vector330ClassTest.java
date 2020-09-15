@@ -68,6 +68,34 @@ public class Vector330ClassTest {
 
     }
 
+    /**@Test
+     *
+     */
+    void setY(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void setX1(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void setY1(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void setX2(){
+
+    }
+
     /**
 }
 
