@@ -118,11 +118,88 @@ public class Vector330Class {
     components within epsilon of each other
      */
     public boolean equals(Vector330Class v){
-        if(v == null){
-            return true;
-        } else {
-            return false;
-        }
+        return v == null;
+    }
+
+    /*
+    does vector addition of this vector with the one passed in
+     */
+    public Vector330Class add(Vector330Class v){
+        //vector addition
+
+        return v;
+    }
+
+    /*
+    subtracts passed in vector from this vector
+     */
+
+    public Vector330Class subtract(Vector330Class v){
+        return v;
+    }
+
+    /*
+     computes the dot product of this vector and the other vector
+     */
+
+    public double dotProduct(Vector330Class v){
+        return 0.0;
+    }
+
+    /*
+    does a scalar-vector multiplication of this vector with double value passed in
+     */
+
+    public Vector330Class scale( double s) {
+        //return;
+    }
+
+    /*
+    computes the magnitude (2-norm or length) of this vector
+     */
+
+    public double magnitude(){
+
+        return 0.0;
+    }
+
+    /*
+    computes and returns the direction (orientation) of the vector in radians
+     */
+
+    public double direction(){
+        return 0.0;
+    }
+
+    /*
+    creates a normalized (of length one) vector in same direction as this vector
+     */
+
+    public Vector330Class normalize(){
+        //return;
+    }
+
+    /*
+    overrides the default toString() method producing an angle-bracket version of this vector
+     */
+
+    public java.lang.String toString(){
+        //return;
+    }
+
+    /*
+     inputs a Scanner object from which it reads and parses a string representing the
+     vector with and expected form of "< 3.0, 4.0 >" - note spaces are needed after '<',
+     after the comma, and before the '>'.
+     */
+    public static Vector330Class parseVector(java.util.Scanner s) throws java.lang.Exception{
+        //return;
     }
 }
+
+
+
+
+
+
 
