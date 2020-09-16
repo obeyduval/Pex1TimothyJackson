@@ -74,7 +74,18 @@ public class VectorCalculator {
     }
 
     private static void parseVectorExpression(Scanner cmd) throws java.lang.Exception {
+        Vector330Class a = Vector330Class.parseVector(cmd);
 
+        if(cmd.hasNext()){
+            if(cmd.hasNext("+")){
+                cmd.next("+");
+                if(cmd.hasNext("<")){
+                    Vector330Class b = Vector330Class.parseVector(cmd);
+                    Vector330Class c = a.add(b);
+                    System.out.println("Result is: " + c);
+                }
+            }
+        }
         throw new Exception("Invalid Vector ");
 
     }
