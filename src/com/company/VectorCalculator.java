@@ -58,8 +58,10 @@ public class VectorCalculator {
         b.setY(3);
         b.setX(2.0);
         b.setY(3.0);
-        b.setX(2.0);
-        b.setY(3.0);
+        long xX = 2;
+        b.setX(xX);
+        long yY = 3;
+        b.setY(yY);
 
         }
     private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{
