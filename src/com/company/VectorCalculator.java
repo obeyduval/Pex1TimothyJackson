@@ -43,6 +43,9 @@ public class VectorCalculator {
             }
         }
 
+//        Vector330Class b = new Vector330Class(0.0, 0.0);
+//        System.out.println(b.getXint());
+
         System.out.println("Thank you for using the Vector Calculator!");
     }
     private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{

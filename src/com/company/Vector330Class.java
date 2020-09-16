@@ -5,6 +5,7 @@ public class Vector330Class {
     private double x;
     private double y;
 
+
     /*
     constructor initializing both x and y components with doubles
      */
