@@ -186,15 +186,15 @@ public class Vector330Class {
     public double direction(){
         return (Math.toRadians(Math.toDegrees(Math.atan(this.y/this.x))));
     }
-//
-//    /*
-//    creates a normalized (of length one) vector in same direction as this vector
-//     */
-//
-//    public Vector330Class normalize(){
-//        //return;
-//    }
-//
+
+    /*
+    creates a normalized (of length one) vector in same direction as this vector
+     */
+
+    public Vector330Class normalize(){
+        return new Vector330Class((1/magnitude() * this.x), (1/magnitude() * this.y));
+    }
+
 //    /*
 //    overrides the default toString() method producing an angle-bracket version of this vector
 //     */

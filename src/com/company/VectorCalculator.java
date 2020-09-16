@@ -47,28 +47,8 @@ public class VectorCalculator {
 
 
         System.out.println("Start test with x = 20, y = 20");
-        Vector330Class b = new Vector330Class(20, 20);
-        System.out.println("x vector as a double: " + b.getX());
-        System.out.println("y vector as a double: " + b.getY());
-        System.out.println("x vector as a int: " + b.getXint());
-        System.out.println("y vector as a int: " + b.getYint());
-        System.out.println("x vector as a long: " + b.getXlong());
-        System.out.println("y vector as a long: " + b.getYlong());
-        b.setX(2);
-        b.setY(3);
-        b.setX(2.0);
-        b.setY(3.0);
-        long xX = 2;
-        b.setX(xX);
-        long yY = 3;
-        b.setY(yY);
-        System.out.println(b.equals(b));
-        b.add(b);
-        b.subtract(b);
-        System.out.println(b.dotProduct(b));
-        b.scale(5.0);
-        System.out.println(b.magnitude());
-        System.out.println(b.direction());
+        Vector330Class b = new Vector330Class(4, 2);
+        System.out.println(b.normalize());
         }
     private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{
 
