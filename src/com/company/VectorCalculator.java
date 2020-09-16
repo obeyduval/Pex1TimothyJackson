@@ -60,6 +60,7 @@ public class VectorCalculator {
         b.setY(3.0);
         b.setX(2.0);
         b.setY(3.0);
+
         }
     private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{
 

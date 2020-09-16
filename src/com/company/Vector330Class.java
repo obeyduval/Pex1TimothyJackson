@@ -60,7 +60,7 @@ public class Vector330Class {
         returns y component of vector as a double
      */
     public int getYint(){
-        return (int) this.x;
+        return (int) this.y;
     }
 
     /*
@@ -74,7 +74,7 @@ public class Vector330Class {
         returns y component of vector as a long
      */
     public long getYlong(){
-        return (long) this.x;
+        return (long) this.y;
     }
 
     /*
