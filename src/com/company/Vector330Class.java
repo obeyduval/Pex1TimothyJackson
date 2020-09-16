@@ -150,7 +150,7 @@ public class Vector330Class {
     subtracts passed in vector from this vector
      */
     public Vector330Class subtract(Vector330Class v){
-        return v;
+        return new Vector330Class(this.x - v.x, this.y - v.y);
     }
 
     /*
