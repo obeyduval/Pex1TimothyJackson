@@ -123,5 +123,47 @@ public class Vector330ClassTest {
     void subtract(){
 
     }
+
+    /**@Test
+     *
+     */
+    void scale(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void magnitude(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void direction(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void normalize(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void parseVector(){
+
+    }
+
+    /**@Test
+     *
+     */
+    void dotProduct(){
+
+    }
 }
 
