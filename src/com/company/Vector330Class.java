@@ -178,14 +178,14 @@ public class Vector330Class {
 
         return Math.sqrt((Math.pow(this.x,2) + Math.pow(this.y,2)));
     }
-//
-//    /*
-//    computes and returns the direction (orientation) of the vector in radians
-//     */
-//
-//    public double direction(){
-//        return 0.0;
-//    }
+
+    /*
+    computes and returns the direction (orientation) of the vector in radians
+     */
+
+    public double direction(){
+        return (Math.toRadians(Math.toDegrees(Math.atan(this.y/this.x))));
+    }
 //
 //    /*
 //    creates a normalized (of length one) vector in same direction as this vector
