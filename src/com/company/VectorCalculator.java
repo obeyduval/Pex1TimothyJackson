@@ -45,11 +45,11 @@ public class VectorCalculator {
 
         System.out.println("Thank you for using the Vector Calculator!");
     }
-    private static void parseDirectionExpression(Scanner cmd){
+    private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{
 
     }
 
-    private static void parseExpression(Scanner cmd) throws Exception {
+    private static void parseExpression(Scanner cmd) throws java.lang.Exception {
         if (cmd.hasNext("<")) {
             parseVectorExpression(cmd);
         } else if (cmd.hasNext("\\d")) {
@@ -57,18 +57,18 @@ public class VectorCalculator {
         }
     }
 
-    private static void parseNormalizeExpression(Scanner cmd) throws Exception {
+    private static void parseNormalizeExpression(Scanner cmd) throws java.lang.Exception {
     }
 
-    private static void parseNormExpression(Scanner cmd) throws Exception{
-
-    }
-
-    private static void parseScaleExpression(Scanner cmd) throws Exception{
+    private static void parseNormExpression(Scanner cmd) throws java.lang.Exception{
 
     }
 
-    private static void parseVectorExpression(Scanner cmd) throws Exception {
+    private static void parseScaleExpression(Scanner cmd) throws java.lang.Exception{
+
+    }
+
+    private static void parseVectorExpression(Scanner cmd) throws java.lang.Exception {
 
         throw new Exception("Invalid Vector ");
 
