@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  */
 public class VectorCalculator {
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         // introduce user to calculator UI
         System.out.println("Welcome to the Vector Calculator!");
         boolean moreToDo = true;
