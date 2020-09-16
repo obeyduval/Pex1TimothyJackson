@@ -43,11 +43,24 @@ public class VectorCalculator {
             }
         }
 
-//        Vector330Class b = new Vector330Class(0.0, 0.0);
-//        System.out.println(b.getXint());
-
         System.out.println("Thank you for using the Vector Calculator!");
-    }
+
+
+        System.out.println("Start test with x = 2, y = 3");
+        Vector330Class b = new Vector330Class(2, 3);
+        System.out.println("x vector as a double: " + b.getX());
+        System.out.println("y vector as a double: " + b.getY());
+        System.out.println("x vector as a int: " + b.getXint());
+        System.out.println("y vector as a int: " + b.getYint());
+        System.out.println("x vector as a long: " + b.getXlong());
+        System.out.println("y vector as a long: " + b.getYlong());
+        b.setX(2);
+        b.setY(3);
+        b.setX(2.0);
+        b.setY(3.0);
+        b.setX(2.0);
+        b.setY(3.0);
+        }
     private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{
 
     }

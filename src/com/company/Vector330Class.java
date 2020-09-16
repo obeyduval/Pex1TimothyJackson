@@ -12,6 +12,8 @@ public class Vector330Class {
     public Vector330Class (double x, double y) {
         this.x = x;
         this.y = y;
+        System.out.println("initialized x vector : " + this.x);
+        System.out.println("initialized y vector : " + this.y);
     }
 
     /*
@@ -20,6 +22,8 @@ public class Vector330Class {
     public Vector330Class(int x, int y){
         this.x = (double) x;
         this.y = (double) y;
+        System.out.println("initialized x vector : " + this.x);
+        System.out.println("initialized y vector : " + this.y);
     }
 
     /*
@@ -28,6 +32,8 @@ public class Vector330Class {
     public Vector330Class(long x, long y){
         this.x = (double) x;
         this.y = (double) y;
+        System.out.println("initialized x vector : " + this.x);
+        System.out.println("initialized y vector : " + this.y);
     }
 
     /*
@@ -75,14 +81,16 @@ public class Vector330Class {
      sets the x component of vector using an input of type double
     */
     public void setX(double x){
-        this.x = x;
+        this.x = (double) x;
+        System.out.println("x vector as a double from double input: " + this.x);
     }
 
     /*
      sets the y component of vector using an input of type double
     */
     public void setY(double y){
-        this.y = y;
+        this.y = ( double) y;
+        System.out.println("y vector as a double from double input: " + this.y);
     }
 
     /*
@@ -90,6 +98,8 @@ public class Vector330Class {
     */
     public void setX(int x){
         this.x = (double) x;
+        System.out.println("x vector as a double from int input: " + this.x);
+
     }
 
     /*
@@ -97,6 +107,7 @@ public class Vector330Class {
     */
     public void setY(int y){
         this.y = (double) y;
+        System.out.println("y vector as a double from int input: " + this.y);
     }
 
     /*
@@ -104,6 +115,8 @@ public class Vector330Class {
     */
     public void setX(long x){
         this.x = (double) x;
+        System.out.println("x vector as a double from long input: " + this.x);
+
     }
 
     /*
@@ -111,6 +124,7 @@ public class Vector330Class {
     */
     public void setY(long y){
         this.y = (double) y;
+        System.out.println("y vector as a double from long input: " + this.y);
     }
 
     /*
