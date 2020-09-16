@@ -64,6 +64,7 @@ public class VectorCalculator {
         b.setY(yY);
         System.out.println(b.equals(b));
         b.add(b);
+        b.subtract(b);
 
 
         }
