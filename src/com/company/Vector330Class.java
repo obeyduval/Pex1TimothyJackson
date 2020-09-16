@@ -12,8 +12,8 @@ public class Vector330Class {
     public Vector330Class (double x, double y) {
         this.x = x;
         this.y = y;
-        System.out.println("initialized x vector : " + this.x);
-        System.out.println("initialized y vector : " + this.y);
+        System.out.println("x vector : " + this.x);
+        System.out.println("y vector : " + this.y);
     }
 
     /*
@@ -22,8 +22,8 @@ public class Vector330Class {
     public Vector330Class(int x, int y){
         this.x = (double) x;
         this.y = (double) y;
-        System.out.println("initialized x vector : " + this.x);
-        System.out.println("initialized y vector : " + this.y);
+        System.out.println("x vector : " + this.x);
+        System.out.println("y vector : " + this.y);
     }
 
     /*
@@ -32,8 +32,8 @@ public class Vector330Class {
     public Vector330Class(long x, long y){
         this.x = (double) x;
         this.y = (double) y;
-        System.out.println("initialized x vector : " + this.x);
-        System.out.println("initialized y vector : " + this.y);
+        System.out.println("x vector : " + this.x);
+        System.out.println("y vector : " + this.y);
     }
 
     /*
@@ -157,26 +157,27 @@ public class Vector330Class {
      computes the dot product of this vector and the other vector
      */
 
-//    public double dotProduct(Vector330Class v){
-//        return 0.0;
-//    }
-//
-//    /*
-//    does a scalar-vector multiplication of this vector with double value passed in
-//     */
-//
-//    public Vector330Class scale( double s) {
-//        //return;
-//    }
-//
-//    /*
-//    computes the magnitude (2-norm or length) of this vector
-//     */
-//
-//    public double magnitude(){
-//
-//        return 0.0;
-//    }
+    public double dotProduct(Vector330Class v){
+        double dProduct = ((this.x * v.x) + (this.y * v.y));
+        return dProduct;
+    }
+
+    /*
+    does a scalar-vector multiplication of this vector with double value passed in
+     */
+
+    public Vector330Class scale( double s) {
+        return new Vector330Class(this.x * s, this.y * s);
+    }
+
+    /*
+    computes the magnitude (2-norm or length) of this vector
+     */
+
+    public double magnitude(){
+
+        return Math.sqrt((Math.pow(this.x,2) + Math.pow(this.y,2)));
+    }
 //
 //    /*
 //    computes and returns the direction (orientation) of the vector in radians

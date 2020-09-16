@@ -65,7 +65,9 @@ public class VectorCalculator {
         System.out.println(b.equals(b));
         b.add(b);
         b.subtract(b);
-
+        System.out.println(b.dotProduct(b));
+        b.scale(5.0);
+        System.out.println(b.magnitude());
 
         }
     private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{
