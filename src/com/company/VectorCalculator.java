@@ -62,6 +62,7 @@ public class VectorCalculator {
         b.setX(xX);
         long yY = 3;
         b.setY(yY);
+        System.out.println(b.equals(b));
 
         }
     private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{
