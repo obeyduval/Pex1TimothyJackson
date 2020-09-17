@@ -45,10 +45,6 @@ public class VectorCalculator {
 
         System.out.println("Thank you for using the Vector Calculator!");
 
-
-        System.out.println("Start test with x = 20, y = 20");
-        Vector330Class b = new Vector330Class(4, 2);
-        System.out.println(b.normalize());
         }
     private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{
 

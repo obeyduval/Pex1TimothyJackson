@@ -191,7 +191,8 @@ public class Vector330Class {
      after the comma, and before the '>'.
      */
     public static Vector330Class parseVector(java.util.Scanner s) throws java.lang.Exception{
-        return;
+
+        return null;
     }
 }
 
