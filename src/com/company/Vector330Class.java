@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.regex.Pattern;
+
 public class Vector330Class {
     private static final double EPS = 1.0E-9;
     private double x;
@@ -191,8 +193,31 @@ public class Vector330Class {
      after the comma, and before the '>'.
      */
     public static Vector330Class parseVector(java.util.Scanner s) throws java.lang.Exception{
+        double xVect = 0.0, yVect = 0.0;
+        Vector330Class vectRes = new Vector330Class(3,4);
 
-        return null;
+        Pattern originalPattern = s.delimiter();
+
+        s.delimiter("[" + originalPattern + ",]");
+
+        if(s.hasNext("<")){
+            s.next("<");
+            if(s.hasNextDouble()){
+                xVect = s.nextDouble();
+                s.useDelimiter(originalPattern);
+                if(s.hasNext(",")){
+                    s.hasNext(",");
+                        if(s.hasNextDouble()){
+
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        return Vector330Class vectRes;
     }
 }
 
