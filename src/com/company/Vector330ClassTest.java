@@ -76,6 +76,12 @@ class Vector330ClassTest {
 
     @Test
     void setY() {
+        a.setY(4.0);
+        assertEquals(4.0, a.getY(), EPS);
+        b.setY(8.0);
+        assertEquals(8.0, b.getY(), EPS);
+        c.setY(-1.0);
+        assertEquals(-1.0, c.getY(), EPS);
     }
 
     @Test
@@ -84,6 +90,12 @@ class Vector330ClassTest {
 
     @Test
     void testSetY() {
+        a.setY(4);
+        assertEquals(4, a.getY(), EPS);
+        b.setY(8);
+        assertEquals(8, b.getY(), EPS);
+        c.setY(-1);
+        assertEquals(-1, c.getY(), EPS);
     }
 
     @Test
@@ -92,6 +104,12 @@ class Vector330ClassTest {
 
     @Test
     void testSetY1() {
+        a.setY(400);
+        assertEquals(400, a.getY(), EPS);
+        b.setY(800);
+        assertEquals(800, b.getY(), EPS);
+        c.setY(-100);
+        assertEquals(-100, c.getY(), EPS);
     }
 
     @Test
