@@ -194,11 +194,10 @@ public class Vector330Class {
      */
     public static Vector330Class parseVector(java.util.Scanner s) throws java.lang.Exception{
         double xVect = 0.0, yVect = 0.0;
-        Vector330Class vectRes = new Vector330Class(3,4);
 
         Pattern originalPattern = s.delimiter();
 
-        s.delimiter("[" + originalPattern + ",]");
+        s.useDelimiter("[" + originalPattern + ",]");
 
         if(s.hasNext("<")){
             s.next("<");
@@ -206,19 +205,33 @@ public class Vector330Class {
                 xVect = s.nextDouble();
                 s.useDelimiter(originalPattern);
                 if(s.hasNext(",")){
-                    s.hasNext(",");
+                    s.next(",");
                         if(s.hasNextDouble()){
+                            yVect = s.nextDouble();
+                            if(s.hasNext(">")){
+                                s.next(">");
+                            } else {
+                                throw new Exception( "Missing end > symbol: ");
+                            }
 
+                        }else {
+                            throw new Exception( "Missing y component of vector: ");
                         }
-                    }
+                } else {
+                    throw new Exception( "Missing , in between two vector components: ");
                 }
+            }else {
+                throw new Exception( "Missing x coordinate of vector: ");
             }
-
+        } else {
+            throw new Exception( "Missing open < for vector: ");
         }
 
+          return new Vector330Class(xVect, yVect);
 
-        return Vector330Class vectRes;
+
     }
+
 }
 
 

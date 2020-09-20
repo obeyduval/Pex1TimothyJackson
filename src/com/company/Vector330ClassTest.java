@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class Vector330ClassTest {
@@ -28,9 +30,9 @@ class Vector330ClassTest {
 
     @Test
     void getX() {
-        assertEquals(3.0, a.getX());
-        assertEquals(-1.7, b.getX());
-        assertEquals(8.4, c.getX());
+        assertEquals(3.0, a.getX(), EPS);
+        assertEquals(-1.7, b.getX(), EPS);
+        assertEquals(8.4, c.getX(), EPS);
     }
 
     @Test
@@ -107,7 +109,9 @@ class Vector330ClassTest {
 
     @Test
     void add() {
-        //assert(a.add(a).equals("< 6.0, 8.0 >"));
+        Vector330Class c = a.add(b);
+        assertEquals(c.getX(),1.3,EPS);
+        assertEquals(c.getY(), 4.9, EPS);
     }
 
     @Test
@@ -141,5 +145,41 @@ class Vector330ClassTest {
     @Test
     void testToString() {
         assert(a.toString().equals("< 3.0, 4.0 >"));
+    }
+
+    @Test
+    void parseVector() {
+        String goodVector1 = "< 3.0, 4.0 >";
+        Scanner in1 = new Scanner(goodVector1);
+        Vector330Class parseTest1 = null;
+        try {
+            parseTest1 = Vector330Class.parseVector(in1);
+            assertEquals(parseTest1.getX(), 3.0, EPS);
+            assertEquals(parseTest1.getY(), 4.0, EPS);
+        } catch (Exception e){
+            assertNotNull(parseTest1);
+        }
+
+        String goodVector2 = "< -1.7, 0.9 >";
+        Scanner in2 = new Scanner(goodVector2);
+        Vector330Class parseTest2 = null;
+        try {
+            parseTest2 = Vector330Class.parseVector(in2);
+            assertEquals(parseTest2.getX(), -1.7, EPS);
+            assertEquals(parseTest2.getY(), 0.9, EPS);
+        } catch (Exception e){
+            assertNotNull(parseTest2);
+        }
+
+        String goodVector3 = "< 8.4, -4.4 >";
+        Scanner in3 = new Scanner(goodVector3);
+        Vector330Class parseTest3  = null;
+        try {
+            parseTest3 = Vector330Class.parseVector(in3);
+            assertEquals(parseTest3.getX(), 8.4, EPS);
+            assertEquals(parseTest3.getY(), -4.4, EPS);
+        } catch (Exception e){
+            assertNotNull(parseTest3);
+        }
     }
 }
