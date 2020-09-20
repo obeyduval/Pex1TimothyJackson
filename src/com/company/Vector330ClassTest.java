@@ -193,9 +193,6 @@ class Vector330ClassTest {
 
     @Test
     void dotProduct() {
-        a = new Vector330Class(3.0, 4.0);
-        b = new Vector330Class(-1.7, 0.9);
-        c = new Vector330Class(8.4, -4.4);
 
        assertEquals(a.dotProduct(a), 25, EPS);
        assertEquals(a.dotProduct(b), -1.5,EPS);
@@ -209,6 +206,21 @@ class Vector330ClassTest {
 
     @Test
     void scale() {
+//        a = new Vector330Class(3.0, 4.0);
+//        b = new Vector330Class(-1.7, 0.9);
+//        c = new Vector330Class(8.4, -4.4);
+
+        Vector330Class sRes = a.scale(2.0);
+        assertEquals(sRes.getX(), 6.0, EPS);
+        assertEquals(sRes.getY(), 8.0, EPS);
+
+        sRes = b.scale(-3.5);
+        assertEquals(sRes.getX(), 5.95, EPS);
+        assertEquals(sRes.getY(), -3.15, EPS);
+
+        sRes = c.scale(9.2);
+        assertEquals(sRes.getX(), 77.28, EPS);
+        assertEquals(sRes.getY(), -40.48, EPS);
     }
 
     @Test
@@ -220,6 +232,7 @@ class Vector330ClassTest {
 
     @Test
     void direction() {
+
     }
 
     @Test
