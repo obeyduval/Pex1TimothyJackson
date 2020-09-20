@@ -145,9 +145,26 @@ class Vector330ClassTest {
 
     @Test
     void add() {
-        Vector330Class c = a.add(b);
-        assertEquals(c.getX(),1.3,EPS);
-        assertEquals(c.getY(), 4.9, EPS);
+        Vector330Class d = a.add(a);
+        assertEquals(d.getX(),6.0,EPS);
+        assertEquals(d.getY(),8.0, EPS);
+        d = a.add(b);
+        assertEquals(d.getX(),1.3,EPS);
+        assertEquals(d.getY(),4.9, EPS);
+        d = a.add(c);
+        assertEquals(d.getX(),11.4,EPS);
+        assertEquals(d.getY(),-0.4, EPS);
+
+        d = b.add(b);
+        assertEquals(d.getX(),-3.4,EPS);
+        assertEquals(d.getY(),1.8, EPS);
+        d = b.add(c);
+        assertEquals(d.getX(),6.7,EPS);
+        assertEquals(d.getY(),-3.5, EPS);
+
+        d = c.add(c);
+        assertEquals(d.getX(),16.8,EPS);
+        assertEquals(d.getY(),-8.8, EPS);
     }
 
     @Test
