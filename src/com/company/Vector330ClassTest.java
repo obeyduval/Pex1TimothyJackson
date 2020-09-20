@@ -72,6 +72,12 @@ class Vector330ClassTest {
 
     @Test
     void setX() {
+        a.setX(6.89);
+        assertEquals(6.89, a.getX(), EPS);
+        b.setX(2.3);
+        assertEquals(2.3, b.getX(), EPS);
+        c.setX(-9.0);
+        assertEquals(-9.0, c.getX(), EPS);
     }
 
     @Test
@@ -86,6 +92,12 @@ class Vector330ClassTest {
 
     @Test
     void testSetX() {
+        a.setX(6);
+        assertEquals(6, a.getX(), EPS);
+        b.setX(2);
+        assertEquals(2, b.getX(), EPS);
+        c.setX(-9);
+        assertEquals(-9, c.getX(), EPS);
     }
 
     @Test
@@ -100,6 +112,12 @@ class Vector330ClassTest {
 
     @Test
     void testSetX1() {
+        a.setX(600);
+        assertEquals(600, a.getX(), EPS);
+        b.setX(200);
+        assertEquals(200, b.getX(), EPS);
+        c.setX(-900);
+        assertEquals(-900, c.getX(), EPS);
     }
 
     @Test
