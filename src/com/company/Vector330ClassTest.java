@@ -145,36 +145,66 @@ class Vector330ClassTest {
 
     @Test
     void add() {
-        Vector330Class d = a.add(a);
-        assertEquals(d.getX(),6.0,EPS);
-        assertEquals(d.getY(),8.0, EPS);
-        d = a.add(b);
-        assertEquals(d.getX(),1.3,EPS);
-        assertEquals(d.getY(),4.9, EPS);
-        d = a.add(c);
-        assertEquals(d.getX(),11.4,EPS);
-        assertEquals(d.getY(),-0.4, EPS);
+        Vector330Class addTest = a.add(a);
+        assertEquals(addTest.getX(),6.0,EPS);
+        assertEquals(addTest.getY(),8.0, EPS);
+        addTest = a.add(b);
+        assertEquals(addTest.getX(),1.3,EPS);
+        assertEquals(addTest.getY(),4.9, EPS);
+        addTest = a.add(c);
+        assertEquals(addTest.getX(),11.4,EPS);
+        assertEquals(addTest.getY(),-0.4, EPS);
 
-        d = b.add(b);
-        assertEquals(d.getX(),-3.4,EPS);
-        assertEquals(d.getY(),1.8, EPS);
-        d = b.add(c);
-        assertEquals(d.getX(),6.7,EPS);
-        assertEquals(d.getY(),-3.5, EPS);
+        addTest = b.add(b);
+        assertEquals(addTest.getX(),-3.4,EPS);
+        assertEquals(addTest.getY(),1.8, EPS);
+        addTest = b.add(c);
+        assertEquals(addTest.getX(),6.7,EPS);
+        assertEquals(addTest.getY(),-3.5, EPS);
 
-        d = c.add(c);
-        assertEquals(d.getX(),16.8,EPS);
-        assertEquals(d.getY(),-8.8, EPS);
+        addTest = c.add(c);
+        assertEquals(addTest.getX(),16.8,EPS);
+        assertEquals(addTest.getY(),-8.8, EPS);
     }
 
     @Test
     void subtract() {
-        //assert(a.subtract(a).equals("< 0.0, 0.0 >"));
+        Vector330Class subTest = a.subtract(a);
+        assertEquals(subTest.getX(),0,EPS);
+        assertEquals(subTest.getY(),0, EPS);
+        subTest = a.subtract(b);
+        assertEquals(subTest.getX(),4.7,EPS);
+        assertEquals(subTest.getY(),3.1, EPS);
+        subTest = a.subtract(c);
+        assertEquals(subTest.getX(),-5.4,EPS);
+        assertEquals(subTest.getY(),8.4, EPS);
+
+        subTest = b.subtract(b);
+        assertEquals(subTest.getX(),0,EPS);
+        assertEquals(subTest.getY(),0, EPS);
+        subTest = b.subtract(c);
+        assertEquals(subTest.getX(),-10.1,EPS);
+        assertEquals(subTest.getY(),5.3, EPS);
+
+        subTest = c.subtract(c);
+        assertEquals(subTest.getX(),0,EPS);
+        assertEquals(subTest.getY(),0, EPS);
     }
 
     @Test
     void dotProduct() {
-        //assert(a.add(a).equals("< 9.0, 12.0 >"));
+        a = new Vector330Class(3.0, 4.0);
+        b = new Vector330Class(-1.7, 0.9);
+        c = new Vector330Class(8.4, -4.4);
+
+       assertEquals(a.dotProduct(a), 25, EPS);
+       assertEquals(a.dotProduct(b), -1.5,EPS);
+       assertEquals(a.dotProduct(c), 7.6, EPS);
+
+       assertEquals(b.dotProduct(b), 3.7, EPS);
+       assertEquals(b.dotProduct(c), -18.24, EPS);
+
+       assertEquals(c.dotProduct(c), 89.92, EPS);
     }
 
     @Test
