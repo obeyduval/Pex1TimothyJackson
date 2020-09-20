@@ -213,8 +213,9 @@ class Vector330ClassTest {
 
     @Test
     void magnitude() {
-        double res = a.magnitude();
-        assertEquals(res,5.0,EPS);
+        assertEquals(a.magnitude(),5.0,EPS);
+        assertEquals(b.magnitude(),2.0,EPS);
+        assertEquals(c.magnitude(),9.0,EPS);
     }
 
     @Test
