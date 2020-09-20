@@ -145,6 +145,8 @@ class Vector330ClassTest {
     @Test
     void testToString() {
         assert(a.toString().equals("< 3.0, 4.0 >"));
+        assert(b.toString().equals("< -1.7, 0.9 >"));
+        assert(c.toString().equals("< 8.4, -4.4 >"));
     }
 
     @Test
