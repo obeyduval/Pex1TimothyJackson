@@ -60,8 +60,10 @@ public class VectorCalculator {
         if (cmd.hasNext("<")) {
             parseVectorExpression(cmd);
         } else if (cmd.hasNext("\\d")) {
+            cmd.next("\\d");
             parseScaleExpression(cmd);
         } else if (cmd.hasNext("\\|")) {
+            cmd.next("\\|");
             parseNormExpression(cmd);
         } else if (cmd.hasNext("dir")) {
             cmd.next("dir");
@@ -81,11 +83,11 @@ public class VectorCalculator {
     }
 
     private static void parseNormExpression(Scanner cmd) throws java.lang.Exception {
-
+        // not given example in word doc but left function here
     }
 
     private static void parseScaleExpression(Scanner cmd) throws java.lang.Exception {
-
+        // not given example in word doc but left function here
     }
 
     private static void parseVectorExpression(Scanner cmd) throws java.lang.Exception {

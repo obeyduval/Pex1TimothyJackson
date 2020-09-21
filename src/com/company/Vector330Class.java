@@ -161,8 +161,7 @@ public class Vector330Class {
      */
 
     public double magnitude() {
-        double res = Math.sqrt((Math.pow(this.x, 2) + Math.pow(this.y, 2)));
-        return res;
+        return Math.sqrt((Math.pow(this.x, 2) + Math.pow(this.y, 2)));
     }
 
     /**
