@@ -228,7 +228,6 @@ class Vector330ClassTest {
 
     @Test
     void direction() {
-        double resDir = a.direction();
         assertEquals(a.direction(),0.9272952180016122,EPS);
         assertEquals(b.direction(),-0.48689923181126904,EPS);
         assertEquals(c.direction(),-0.4825132950224769,EPS);
