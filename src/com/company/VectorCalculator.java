@@ -83,7 +83,11 @@ public class VectorCalculator {
     }
 
     private static void parseNormExpression(Scanner cmd) throws java.lang.Exception {
-        // not given example in word doc but left function here
+        Vector330Class a = Vector330Class.parseVector(cmd);
+
+        double c = a.magnitude();
+        System.out.println("Result is: " + c);
+        System.out.println();
     }
 
     private static void parseScaleExpression(Scanner cmd) throws java.lang.Exception {

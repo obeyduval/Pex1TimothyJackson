@@ -175,7 +175,6 @@ public class Vector330Class {
     /**
      * creates a normalized (of length one) vector in same direction as this vector
      */
-
     public Vector330Class normalize() {
         return new Vector330Class((1 / magnitude() * this.x), (1 / magnitude() * this.y));
     }
@@ -193,7 +192,7 @@ public class Vector330Class {
      after the comma, and before the '>'.
      */
     public static Vector330Class parseVector(java.util.Scanner s) throws java.lang.Exception{
-        double xVect = 0.0, yVect = 0.0;
+        double xVect, yVect;
 
         Pattern originalPattern = s.delimiter();
 
