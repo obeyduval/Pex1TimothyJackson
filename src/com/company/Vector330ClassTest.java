@@ -206,10 +206,6 @@ class Vector330ClassTest {
 
     @Test
     void scale() {
-//        a = new Vector330Class(3.0, 4.0);
-//        b = new Vector330Class(-1.7, 0.9);
-//        c = new Vector330Class(8.4, -4.4);
-
         Vector330Class sRes = a.scale(2.0);
         assertEquals(sRes.getX(), 6.0, EPS);
         assertEquals(sRes.getY(), 8.0, EPS);
@@ -226,17 +222,31 @@ class Vector330ClassTest {
     @Test
     void magnitude() {
         assertEquals(a.magnitude(),5.0,EPS);
-        assertEquals(b.magnitude(),2.0,EPS);
-        assertEquals(c.magnitude(),9.0,EPS);
+        assertEquals(b.magnitude(),1.9235384061671343,EPS);
+        assertEquals(c.magnitude(),9.482615672903759,EPS);
     }
 
     @Test
     void direction() {
-
+        double resDir = a.direction();
+        assertEquals(a.direction(),0.9272952180016122,EPS);
+        assertEquals(b.direction(),-0.48689923181126904,EPS);
+        assertEquals(c.direction(),-0.4825132950224769,EPS);
     }
 
     @Test
     void normalize() {
+        Vector330Class nRes = a.normalize();
+        assertEquals(nRes.getX(), 0.6000000000000001, EPS);
+        assertEquals(nRes.getY(), 0.8, EPS);
+
+        nRes = b.normalize();
+        assertEquals(nRes.getX(), -0.8837879163470618, EPS);
+        assertEquals(nRes.getY(), 0.4678877204190327, EPS);
+
+        nRes = c.normalize();
+        assertEquals(nRes.getX(), 0.8858315352801553, EPS);
+        assertEquals(nRes.getY(), -0.4640069946705576, EPS);
     }
 
     @Test
