@@ -11,9 +11,9 @@ import java.util.regex.Pattern;
  */
 public class VectorCalculator {
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         // introduce user to calculator UI
-        System.out.println("Welcome to the Vector Calculator!");
+        System.out.println("Welcome to the Vector Calculator!\n");
         boolean moreToDo = true;
         Scanner in = new Scanner(System.in);
 
@@ -45,8 +45,14 @@ public class VectorCalculator {
 
         System.out.println("Thank you for using the Vector Calculator!");
 
-        }
-    private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception{
+    }
+
+    private static void parseDirectionExpression(Scanner cmd) throws java.lang.Exception {
+        Vector330Class a = Vector330Class.parseVector(cmd);
+
+        double c = a.direction();
+        System.out.println("Result is: " + c + " Radians");
+        System.out.println();
 
     }
 
@@ -55,39 +61,63 @@ public class VectorCalculator {
             parseVectorExpression(cmd);
         } else if (cmd.hasNext("\\d")) {
             parseScaleExpression(cmd);
-        } else if (cmd.hasNext("\\|")){
+        } else if (cmd.hasNext("\\|")) {
             parseNormExpression(cmd);
-        } else if (cmd.hasNext("dir")){
+        } else if (cmd.hasNext("dir")) {
+            cmd.next("dir");
             parseDirectionExpression(cmd);
-        } else if (cmd.hasNext("unit")){
+        } else if (cmd.hasNext("unit")) {
+            cmd.next("unit");
             parseNormalizeExpression(cmd);
         }
     }
 
     private static void parseNormalizeExpression(Scanner cmd) throws java.lang.Exception {
+        Vector330Class a = Vector330Class.parseVector(cmd);
+
+        Vector330Class c = a.normalize();
+        System.out.println("Result is: " + c);
+        System.out.println();
     }
 
-    private static void parseNormExpression(Scanner cmd) throws java.lang.Exception{
+    private static void parseNormExpression(Scanner cmd) throws java.lang.Exception {
 
     }
 
-    private static void parseScaleExpression(Scanner cmd) throws java.lang.Exception{
+    private static void parseScaleExpression(Scanner cmd) throws java.lang.Exception {
 
     }
 
     private static void parseVectorExpression(Scanner cmd) throws java.lang.Exception {
         Vector330Class a = Vector330Class.parseVector(cmd);
 
-        if(cmd.hasNext()){
-            if(cmd.hasNext("[+]")){
+        if (cmd.hasNext()) {
+            if (cmd.hasNext("[+]")) {
                 cmd.next("[+]");
-                if(cmd.hasNext("<")){
+                if (cmd.hasNext("<")) {
                     Vector330Class b = Vector330Class.parseVector(cmd);
                     Vector330Class c = a.add(b);
                     System.out.println("Result is: " + c);
+                    System.out.println();
+                }
+            } else if (cmd.hasNext("[-]")) {
+                cmd.next("[-]");
+                if (cmd.hasNext("<")) {
+                    Vector330Class b = Vector330Class.parseVector(cmd);
+                    Vector330Class c = a.subtract(b);
+                    System.out.println("Result is: " + c);
+                    System.out.println();
+                }
+            } else if (cmd.hasNext("[.]")) {
+                cmd.next("[.]");
+                if (cmd.hasNext("<")) {
+                    Vector330Class b = Vector330Class.parseVector(cmd);
+                    double c = a.dotProduct(b);
+                    System.out.println("Result is: " + c);
+                    System.out.println();
                 }
             }
         }
-    }
 
+    }
 }
