@@ -53,19 +53,14 @@ public class VectorCalculator {
     private static void parseExpression(Scanner cmd) throws java.lang.Exception {
         if (cmd.hasNext("<")) {
             parseVectorExpression(cmd);
-            System.out.println("<");
         } else if (cmd.hasNext("\\d")) {
             parseScaleExpression(cmd);
-            System.out.println("\\");
         } else if (cmd.hasNext("\\|")){
             parseNormExpression(cmd);
-            System.out.println("\\|");
         } else if (cmd.hasNext("dir")){
             parseDirectionExpression(cmd);
-            System.out.println("dir");
         } else if (cmd.hasNext("unit")){
             parseNormalizeExpression(cmd);
-            System.out.println("unit");
         }
     }
 
@@ -93,8 +88,6 @@ public class VectorCalculator {
                 }
             }
         }
-        throw new Exception("Invalid Vector ");
-
     }
 
 }
