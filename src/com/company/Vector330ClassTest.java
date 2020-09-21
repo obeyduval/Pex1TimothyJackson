@@ -8,6 +8,12 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * @authors - Timothy Jackson
+ * @teacher - Dr. Hadfield
+ * @pex - PEX 1 - Vector Calculator
+ * @documentation - Got ei on how to create official test class and how asserts work for objects
+ */
 class Vector330ClassTest {
     private static final double EPS = 1.0E-9;
     Vector330Class a;

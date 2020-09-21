@@ -1,13 +1,14 @@
 package com.company;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/*
+/**
 * @authors - Timothy Jackson
 * @teacher - Dr. Hadfield
 * @pex - PEX 1 - Vector Calculator
+ * @documentation - Got ei on how the if statements work to parse expression and while loop.
+ * Looked up some simple formats of things like scanner on stack overflow.
  */
 public class VectorCalculator {
 
@@ -61,7 +62,7 @@ public class VectorCalculator {
             parseVectorExpression(cmd);
         } else if (cmd.hasNext("\\d")) {
             cmd.next("\\d");
-            parseScaleExpression(cmd);
+            //parseScaleExpression(cmd);
         } else if (cmd.hasNext("\\|")) {
             cmd.next("\\|");
             parseNormExpression(cmd);
@@ -90,9 +91,9 @@ public class VectorCalculator {
         System.out.println();
     }
 
-    private static void parseScaleExpression(Scanner cmd) throws java.lang.Exception {
-        // not given example in word doc but left function here
-    }
+//    private static void parseScaleExpression(Scanner cmd) throws java.lang.Exception {
+//        // not given example in word doc but left function here
+//    }
 
     private static void parseVectorExpression(Scanner cmd) throws java.lang.Exception {
         Vector330Class a = Vector330Class.parseVector(cmd);

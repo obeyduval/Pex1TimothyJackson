@@ -2,6 +2,13 @@ package com.company;
 
 import java.util.regex.Pattern;
 
+/**
+ * @authors - Timothy Jackson
+ * @teacher - Dr. Hadfield
+ * @pex - PEX 1 - Vector Calculator
+ * @documentation - Got ei on how multiple functions return and initialize objects
+ * Looked up how to do some vector math expressions.
+ */
 public class Vector330Class {
     private static final double EPS = 1.0E-9;
     private double x;
